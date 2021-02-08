@@ -1,7 +1,7 @@
 import * as React from 'react';
+import {Link} from "react-router-dom";
 import Contact from './Contact';
 import contacts from './contactsData';
-import {Link} from "react-router-dom";
 
 
 const Contacts = () => {

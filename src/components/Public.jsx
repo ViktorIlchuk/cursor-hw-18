@@ -1,6 +1,6 @@
 import React from 'react';
-import approvalIcon from '../img/approvalIcon.png';
 import StyledPost from './Post.view'
+import approvalIcon from '../img/approvalIcon.png';
 
 const ANAKIN_IMAGE = "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg";
 
@@ -15,22 +15,21 @@ const DATA = {
     date: "26 февр."
 }
 
-function Post() {
-    return (
-        <StyledPost>            
-            <img src={DATA.photo} className='avatar' alt='avatar' />
-            <div className='postInfo'>
-                <div className='authorInfo'>
-                    <p className='authorName'>{DATA.name}</p>
-                    <img className='active' src={approvalIcon}  alt='approval' />
-                    <p className='nickName'>{DATA.nickname}</p>                   
-                    <p className='postDate'>{DATA.date}</p>
-                </div>
-                <p className='postText'>{DATA.content}</p>
-                <img className='postImage' src={DATA.image} alt='postImage' />
+const Post = () => (
+    <StyledPost>            
+        <img src={DATA.photo} className='avatar' alt='avatar' />
+        <div className='postInfo'>
+            <div className='authorInfo'>
+                <p className='authorName'>{DATA.name}</p>
+                <img className='active' src={approvalIcon}  alt='approval' />
+                <p className='nickName'>{DATA.nickname}</p>                   
+                <p className='postDate'>{DATA.date}</p>
             </div>
-        </StyledPost>
-    )
-}
+            <p className='postText'>{DATA.content}</p>
+            <img className='postImage' src={DATA.image} alt='postImage' />
+        </div>
+    </StyledPost>
+)
+
 
 export default Post;
